@@ -1,0 +1,59 @@
+{% load static %}
+{% static "images" as bu %}
+<!DOCTYPE html>
+<head>
+<title>Leaders</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrapper">
+  <div id="inner">
+    <div id="header">
+      <h1><img src="{{bu}}/plain.jpg" width="519" height="63" alt="Online Movie Store" /></h1>
+      <div id="nav"> <a href="{% static 'http://all-free-download.com/free-website-templates/' %}">HOME</a> | <a href="{% static 'http://all-free-download.com/free-website-templates/' %}">view cart</a> | <a href="{% static 'http://all-free-download.com/free-website-templates/' %}">help</a> </div>
+      <a href="{% static 'http://all-free-download.com/free-website-templates/' %}"><img src="{{bu}}/plain.jpg" width="744" height="145" alt="Harry Potter cd" /></a> <a href="{% static 'http://all-free-download.com/free-website-templates/' %}"><img src="{{bu}}/plain.jpg" width="745" height="48" alt="" /></a> </div>
+    <dl id="browse">
+      <dt>Full Category Lists</dt>
+      <dd class="first"><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Hard &amp; Smart</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Good &amp; Poor</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">National &amp; International</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Salary</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Leaders</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Ages</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Experienced</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">New</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Innovative</a></dd>
+      <dd><a href="{% static 'http://all-free-download.com/free-website-templates/' %}">Creative</a></dd>
+      <dd class="last"><a href="http://all-free-download.com/free-website-templates/">Great</a></dd>
+      <dt>Search Your Favourite Leader</dt>
+      <dd class="searchform">
+        <form action="{% static 'http://all-free-download.com/free-website-templates/' %}" method="get">
+          <div class="softright">
+            <input/> Search
+          </div>
+        </form>
+      </dd>
+    </dl>
+    <div id="body">
+      <div class="inner">
+        <div class="leftbox">
+          {% for de in d %}
+          <h3>{{de.name}}</h3>
+          <img src="{{de.img.url}}" width="93" height="95" alt="photo 1" class="left" />
+          <p><b>Remuneration:</b> <b>${{de.price}}</b> &amp; eligible for overtime working. <b>$195</b>.</p>
+          <p><b>Availability:</b> 24 hours</p>
+          <p class="readmore"><a href="http://all-free-download.com/free-website-templates/">Ask <b>NOW</b></a></p>
+          <div class="clear"></div>
+          {% endfor %}
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer"> Web design by <a href="http://www.freewebsitetemplates.com">C Himakar</a> &nbsp;
+      <div id="footnav"> <a href="http://all-free-download.com/free-website-templates/">Legal</a> | <a href="http://all-free-download.com/free-website-templates/">Home</a> </div>
+    </div>
+  </div>
+</div>
+</html>
